@@ -5,9 +5,9 @@
 
 ---
 ## Work Flow
-### 1
+<b>1</b>:
 Imputation  
-### 2
+<b>2</b>:
 Ordinal Encoding  
-### 3
+<b>3</b>:
 One-Hot Encoding
