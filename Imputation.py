@@ -13,6 +13,7 @@ print(f"\n\n\nColumns with null value(s): {null_cols}")
 for i in null_cols:
     num_null=data[i].isnull().sum()
     if data[i].dtype == 'object':
+        data[i].fillna('Unknown',inplace=True)
         print(f"\nCategorical data in column {i}, Filled {num_null} missing values with value *Unknown*\n\n\n\n\n")
     else:
         print(f"Mean value for column {data[i]}: {data[i].mean():.2f}")
@@ -23,4 +24,5 @@ for i in null_cols:
 print(data.head(50))
 
 data.to_csv(input("Enter path to save file: "), index=False) #Save the data after imputation
+
 print("\n\n\nImputation successful")
